@@ -1,10 +1,9 @@
 %{!?tetex:%define tetex 1}
-%define installvendorlibdefine /usr/share/perl5
 
 Summary: A text formatting package based on SGML
 Name: linuxdoc-tools
 Version: 0.9.65
-Release: 3%{?dist}.0.sl
+Release: 3%{?dist}
 License: Copyright only
 Group: Applications/Publishing
 Source: http://http.us.debian.org/debian/pool/main/l/linuxdoc-tools/%{name}_%{version}.tar.gz
@@ -50,8 +49,7 @@ perl -pi -e 's,\$main::prefix/share/sgml/iso-entities-8879.1986/iso-entities.cat
 
 %install
 rm -rf $RPM_BUILD_ROOT
-#eval `perl '-V:installvendorlib'`
-installvendorlib=%{installvendorlibdefine}
+eval `perl '-V:installvendorlib'`
 mkdir -p $RPM_BUILD_ROOT/$installvendorlib
 make install DESTDIR=$RPM_BUILD_ROOT perl5libdir=$installvendorlib
 mv $RPM_BUILD_ROOT%{_docdir}/%{name} $RPM_BUILD_ROOT%{_docdir}/%{name}-%{version}
@@ -98,13 +96,6 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
-* Tue Dec 7 2010 Connie Sieh <csieh@fnal.gov> - 0.9.65-3.0.sl
-- On RHEL/SL 6 perl -V:installvendorlib gives /usr/share/perl5/vendor_perl/
-- The files section was looking for the files in /usr/share/perl5/
-- wanted to change the files section to look in the installvendorlib area
-- but the RHEL 6 rpms have the files in /usr/share/perl5 so will change the
-- $installvendorlib area via a define of installvendorlibdefine 
-
 * Fri Dec 18 2009 Ondrej Vasik <ovasik@redhat.com> - 0.9.65-3
 - License Copyright only
 - do not obsolete self
