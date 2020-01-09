@@ -1,0 +1,14 @@
+#!/bin/sh
+
+set -e
+
+case $1 in
+    configure)
+	if which mktexlsr 2>&1 >  /dev/null; then
+	    mktexlsr /usr/share/texmf
+	fi
+	;;
+    *)
+esac
+
+#DEBHELPER#

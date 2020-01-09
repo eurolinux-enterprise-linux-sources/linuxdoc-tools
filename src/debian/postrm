@@ -1,0 +1,15 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+    remove)
+        if which mktexlsr 2>&1 >  /dev/null ; then
+	    mktexlsr /usr/share/texmf
+        fi
+	;;
+    *)
+esac
+
+#DEBHELPER#
+

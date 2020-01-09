@@ -1,0 +1,23 @@
+See sgmls-1.1/LICENSE for sgmlsasp translator license.
+See iso-entities/COPYING for iso-entities license.
+See entity-map/COPYING for entity-map license.
+
+Unless conflicting with other licenses, changes by Agustin Martin
+Domingo are free software: you can redistribute and/or modify them
+under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version. Otherwise they honour previous
+license.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Everything not having explicit additional conditions can be freely
+used, modified, and redistributed, under the usual fair use clauses:
+
+ * No warranty. Use at your own risk.
+ * Do not pretend to have written what you did not (Preserve credits
+   and Copyright notices of the different elements if present.)
+
+You need jade or openjade to use this software.
+

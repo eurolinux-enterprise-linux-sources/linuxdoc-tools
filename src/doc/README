@@ -1,0 +1,21 @@
+This directory contains documentation for the system: 
+o guide.sgml is the SGML source for the LinuxDoc-Tools User's Guide
+o guide.txt is formatted plain ASCII
+
+These are build (and guide.txt is rebuild) during ``make install'':
+o guide.dvi is DVI
+o guide.ps.gz is gzipped PostScript
+o guide.info is in GNU info format
+o guide.lyx is LyX format
+o html/ contains the HTML version
+o rtf/ contains the RTF version
+
+You should read guide.txt first - it explains how to install the software
+and how to write and format documents using the system.
+
+Also, there's example.sgml, which is a simple SGML example. You should
+format this example (instructions for doing so in the User's Guide) and 
+print it out, along with the source, and use it as a model for writing
+your own SGML docs. You can also grab the SGML sources for the Linux HOWTOs 
+from sunsite.unc.edu:/pub/Linux/docs/HOWTO/other-formats/sgml. These 
+documents together will give you a good start on using the system.
