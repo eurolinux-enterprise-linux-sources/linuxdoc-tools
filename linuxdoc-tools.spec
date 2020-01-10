@@ -4,7 +4,7 @@
 Summary: A text formatting package based on SGML
 Name: linuxdoc-tools
 Version: 0.9.68
-Release: 3%{?dist}
+Release: 5%{?dist}
 License: Copyright only
 Group: Applications/Publishing
 Source: http://http.us.debian.org/debian/pool/main/l/linuxdoc-tools/%{name}_%{version}.tar.gz
@@ -104,6 +104,12 @@ exit 0
 %{_mandir}/*/*
 
 %changelog
+* Fri Jan 24 2014 Daniel Mach <dmach@redhat.com> - 0.9.68-5
+- Mass rebuild 2014-01-24
+
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 0.9.68-4
+- Mass rebuild 2013-12-27
+
 * Tue Feb 19 2013 Martin Milata <mmilata@redhat.com> - 0.9.68-3
 - fix build with newer flex versions
 
